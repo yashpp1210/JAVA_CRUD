@@ -1,14 +1,25 @@
 package com.comeback.SimpleWebApp.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
+@NoArgsConstructor
+@Entity
 @Data
 public class Product {
 
     //Model layer : Which contains mostly the data part.
+
+    @Id
     private int prodId;
     private String prodName;
     private int price;
+
+
 
 
     public String getProdName() {
